@@ -1,16 +1,133 @@
-# React + Vite
+# Inventory Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based frontend for the Inventory Management System. It provides a clean UI for managing products, inventory, orders, and analytics while connecting to a Spring Boot backend.
 
-Currently, two official plugins are available:
+Supports role-based dashboards for ADMIN and USER accounts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Authentication UI** — Login system connected to backend  
+- **Role-Based Dashboard** — Different views for admin and user  
+- **Product Management UI** — View and manage products  
+- **Inventory Tracking** — Real-time stock visibility  
+- **Order System** — Create and track orders  
+- **Sales Dashboard** — Charts and analytics  
+- **Low-Stock Alerts** — Visual warnings for inventory levels  
+- **Search & Filtering** — Product search functionality  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19  
+- Vite  
+- React Router DOM  
+- Axios  
+- Recharts  
+
+---
+
+## User Stories
+
+- As an admin, I want to view a dashboard with inventory stats.  
+- As a user, I want to browse products easily.  
+- As a user, I want to place orders through the UI.  
+- As an admin, I want to manage products visually.  
+- As an admin, I want to see low-stock alerts.  
+- As an admin, I want to view sales reports.  
+- As a user, I want to view order history.  
+- As a user, I want secure login access.  
+- As an admin, I want role-based UI restrictions.  
+- As a user, I want search and filtering for products.  
+
+---
+
+## Prerequisites
+
+- Node.js 18+  
+- Backend running at http://localhost:8081  
+
+---
+
+## Setup Instructions
+
+Install dependencies:
+
+npm install
+
+---
+
+## Configure API
+
+Update `src/api/axios.js`:
+
+const API = axios.create({
+  baseURL: "http://localhost:8081/api",
+});
+
+---
+
+## Running the Frontend
+
+Start development server:
+
+npm run dev
+
+Frontend runs at:
+http://localhost:5173
+
+---
+
+## Project Structure
+
+api/ → API requests  
+components/ → Reusable UI components  
+context/ → Authentication state  
+pages/ → Application screens  
+
+---
+
+## Pages
+
+- Login  
+- Dashboard  
+- Products  
+- Inventory  
+- Orders  
+- Suppliers  
+- Categories  
+- Sales Report  
+
+---
+
+## Role Permissions
+
+ADMIN:
+- Full access to all features  
+- Manage products, inventory, suppliers  
+- View analytics and reports  
+
+USER:
+- View products  
+- Place orders  
+- View personal order history  
+
+---
+
+## Common Issues
+
+- Backend not connecting → check port 8081  
+- Blank page → reinstall dependencies  
+- API errors → verify axios baseURL  
+
+---
+
+## Future Improvements
+
+- Mobile responsive UI  
+- Better loading/error states  
+- Dark mode support  
+- Improved UI/UX design  
+- Stronger route protection  
